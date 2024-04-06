@@ -9,7 +9,7 @@ const ViewCategory = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/category')
+    fetch('https://digitalflakeassignment-backend.onrender.com/api/category')
       .then(response => response.json())
       .then(data => setCategories(data))
       .catch(error => console.error('Error fetching categories:', error));
@@ -29,7 +29,7 @@ const ViewCategory = () => {
   const handleDelete = (categoryId) => {
     const isConfirmed = window.confirm('Are you sure you want to delete');
     if (isConfirmed) {
-      fetch(`http://localhost:8000/api/category/${categoryId}`, {
+      fetch(`https://digitalflakeassignment-backend.onrender.com/api/category/${categoryId}`, {
         method: 'DELETE'
       })
         .then(response => {
@@ -61,7 +61,7 @@ const ViewCategory = () => {
 
 
   const handleSaveEdit = () => {
-    fetch(`http://localhost:8000/api/category/${editCategory._id}`, {
+    fetch(`https://digitalflakeassignment-backend.onrender.com/api/category/${editCategory._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'

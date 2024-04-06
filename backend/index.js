@@ -7,14 +7,12 @@ app.use(cors());
 app.use(express.json());
 const port = process.env.PORT || 8000;
 const multer = require('multer');
-
-
 const bodyParser = require("body-parser");
 app.use(bodyParser.json({ limit: "10mb" }));
 
 
-app.use('/public', express.static('public'));
 
+app.use('/public', express.static('public'));
 const storage = multer.diskStorage({
   destination: './public/uploads/',
   filename: function (req, file, cb) {
@@ -43,13 +41,15 @@ apiRouter.use("/users", userRoute);
 apiRouter.use("/category", category);
 apiRouter.use("/products", product);
 
+// Api Routing 
 app.use("/api", apiRouter);
 
 
 
 
 
-
+// server listen on port
+// localServer api ---> http://localhost:8000
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

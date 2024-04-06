@@ -47,8 +47,9 @@ const AddProduct = () => {
           formData.append('mrp', mrp);
           formData.append('status', status);
           
-      
-          fetch('http://localhost:8000/api/products', {
+                // local server api ----> http://localhost:8000
+                
+          fetch('https://digitalflakeassignment-backend.onrender.com/api/products', {
             method: 'POST',
             body: formData,
           })

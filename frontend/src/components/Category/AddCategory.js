@@ -22,7 +22,7 @@ const AddCategory = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8000/api/category', {
+            const response = await fetch('https://digitalflakeassignment-backend.onrender.com/api/category', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

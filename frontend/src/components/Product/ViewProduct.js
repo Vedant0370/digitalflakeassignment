@@ -8,7 +8,7 @@ const ViewProduct = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/products')
+    fetch('https://digitalflakeassignment-backend.onrender.com/api/products')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching products:', error));
@@ -27,7 +27,7 @@ const ViewProduct = () => {
   const handleDelete = (productId) => {
     const isConfirmed = window.confirm('Are you sure you want to delete?');
     if (isConfirmed) {
-      fetch(`http://localhost:8000/api/products/${productId}`, {
+      fetch(`https://digitalflakeassignment-backend.onrender.com/api/products/${productId}`, {
         method: 'DELETE'
       })
         .then(response => {
@@ -58,7 +58,7 @@ const ViewProduct = () => {
   };
 
   const handleSaveEdit = () => {
-    fetch(`http://localhost:8000/api/products/${editProduct._id}`, {
+    fetch(`https://digitalflakeassignment-backend.onrender.com/api/products/${editProduct._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
