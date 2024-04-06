@@ -10,6 +10,13 @@ const Login = () => {
     password: ''
   });
 
+  useEffect(() => {
+    const StoredToken = localStorage.getItem('token');
+    if (StoredToken) {
+      navigate("/home")
+    }
+  })
+
 
   const handleChange = (e) => {
     setFormData({
