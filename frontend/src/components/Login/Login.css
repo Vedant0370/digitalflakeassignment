@@ -7,3 +7,10 @@
 .login-image{
     height: 8vh;
 }
+
+.background-image {
+    background-image: url('https://png.pngtree.com/background/20231017/original/pngtree-office-essentials-technology-and-gadgets-illustration-featuring-laptop-printer-camera-tablet-picture-image_5591437.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  

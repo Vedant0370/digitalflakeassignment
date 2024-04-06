@@ -48,10 +48,10 @@ const Login = () => {
 
   return (
     <>
-      <div className="flex justify-center min-h-screen bg-gray-100">
+    <div className="background-image">
+      <div className="flex min-h-screen bg-gray-100 bg-opacity-50">
         <div className="px-8 py-6 mx-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/4 sm:w-1/3 h-3/4 mt-28">
           <div className="flex justify-center">
-           
             <img className='login-image' src={img}/>
           </div>
           <p className="text-2xl text-center font-bold"><span className='digital-name'>digital</span>flake</p>
@@ -80,11 +80,11 @@ const Login = () => {
                   onChange={handleChange}
                   required
                 />
-              <div className="flex">
-                <div className="mt-6 text-grey-dark">
-                  <span className="mr-2">Forget Password</span>
+                <div className="flex">
+                  <div className="mt-6 text-grey-dark">
+                    <span className="mr-2">Forget Password</span>
+                  </div>
                 </div>
-              </div>
                 <button
                   type='submit'
                   className="w-full px-6 py-2 font-bold mt-4 text-white bg-purple-700 rounded-lg hover:bg-purple-700 transition duration-200"
@@ -96,7 +96,8 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
+  </>
   );
 };
 
