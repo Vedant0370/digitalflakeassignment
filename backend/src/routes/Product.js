@@ -31,6 +31,7 @@ router.get("/", async (req, res) => {
 
   router.post("/", upload.single('image'), async (req, res) => {
     try {
+
       if (req.file) {
         const publicUrl = `https://digitalflakeassignment-backend.onrender.com/public/uploads/${req.file.originalname}`;
          
