@@ -1,0 +1,41 @@
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.mt-5 {
+  margin-top: 1.25rem; /* Adjust the top margin as needed */
+}
+
+.digital-name {
+  /* Add specific styles for the digital name span if needed */
+}
+
+.flake {
+  font-weight: 400 !important;
+}
+.flake2 {
+  font-weight: 500 !important;
+}
+.home-logo{
+  height: 12vh;
+}
